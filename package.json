@@ -1,0 +1,38 @@
+{
+  "name": "screepy",
+  "version": "1.0.0",
+  "description": "My screeps bot",
+  "main": "src/index.ts",
+  "repository": "https://github.com/Nax/screepy.git",
+  "author": "Nax <max@bacoux.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "NODE_ENV=production gulp build",
+    "send": "NODE_ENV=production gulp send",
+    "watch": "NODE_ENV=production gulp watch"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.0.0",
+    "bluebird": "^3.5.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-typescript": "^7.1.0",
+    "@types/node": "^10.12.0",
+    "@types/screeps": "^2.5.1",
+    "babel-loader": "^8.0.4",
+    "cache-loader": "^1.2.2",
+    "dotenv": "^6.1.0",
+    "gulp": "^3.9.1",
+    "gulp-cli": "^2.0.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-screeps": "^1.0.8",
+    "uglify-es": "^3.3.9",
+    "uglifyjs-webpack-plugin": "^2.0.1",
+    "webpack": "^4.21.0",
+    "webpack-cli": "^3.1.2",
+    "webpack-stream": "^5.1.1"
+  }
+}
