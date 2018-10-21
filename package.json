@@ -9,7 +9,8 @@
   "private": true,
   "scripts": {
     "build": "NODE_ENV=production gulp build",
-    "send": "NODE_ENV=production gulp send",
+    "deploy": "NODE_ENV=production gulp deploy",
+    "deploy:staging": "NODE_ENV=production gulp deploy:staging",
     "watch": "NODE_ENV=production gulp watch"
   },
   "dependencies": {

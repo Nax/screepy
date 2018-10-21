@@ -20,11 +20,24 @@ gulp.task('watch', () => {
     .pipe(gulp.dest('./dist'));
 });
 
-gulp.task('send', ['build'], () => {
+gulp.task('deploy', ['build'], () => {
   return gulp.src('./dist/screepy.js')
     .pipe(rename('main.js'))
     .pipe(screeps({
       token: process.env.SCREEPS_TOKEN
+    })
+  );
+});
+
+gulp.task('deploy:staging', ['build'], () => {
+  return gulp.src('./dist/screepy.js')
+    .pipe(rename('main.js'))
+    .pipe(screeps({
+      host: process.env.SCREEPS_STAGING_HOST,
+      port: Number(process.env.SCREEPS_STAGING_PORT),
+      email: process.env.SCREEPS_STAGING_EMAIL,
+      password: process.env.SCREEPS_STAGING_PASSWORD,
+      secure: false
     })
   );
 });
