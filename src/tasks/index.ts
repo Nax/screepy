@@ -1,6 +1,6 @@
-import buildRoads from './build-roads';
-import buildExtensions from './build-extensions';
-import build from '../build';
+import buildRoads from './build/roads';
+import buildExtensions from './build/extensions';
+import creepReap from './creep/reap';
 
 interface ITask {
   task:() => void,
@@ -37,4 +37,5 @@ const combineTasks = (tasks:ITask[]) => {
 export default combineTasks([
   { task: buildRoads, period: 10 },
   { task: buildExtensions, period: 20 },
+  { task: creepReap, period: 100 }
 ]);
